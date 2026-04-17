@@ -103,10 +103,21 @@ Evaluated using:
 
 ---
 
-## 📁 Dataset
+## 📁 Dataset  
 
-📌 Telco Customer Churn Dataset
+📌 **Telco Customer Churn Dataset**  
 
+🔗 Source: https://www.kaggle.com/datasets/blastchar/telco-customer-churn  
+
+📊 Description:  
+The dataset includes customer information such as:  
+- Demographics (Gender, Senior Citizen, etc.)  
+- Account details (Tenure, Contract type)  
+- Services used (Internet, Streaming, etc.)  
+- Billing information (Monthly & Total Charges)  
+- Target variable: **Churn**  
+
+📥 A sample dataset is included in this repository for demonstration purposes.
 ---
 
 ## 🚀 Future Improvements
