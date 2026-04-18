@@ -5,7 +5,7 @@
 ## 📌 Overview
 
 This project focuses on analyzing and predicting **customer churn** using SQL and Python.  
-The goal is to identify key factors driving customer attrition and provide **data-driven business recommendations** to improve retention.
+The goal is to identify key factors driving customer attrition and provide **data-driven business recommendations** to improve retention and reduce revenue loss.
 
 ---
 
@@ -14,8 +14,8 @@ The goal is to identify key factors driving customer attrition and provide **dat
 ✔ Analyze customer behavior using SQL & Python  
 ✔ Identify key drivers of churn  
 ✔ Segment high-risk customers  
-✔ Build a predictive model for churn  
-✔ Provide actionable business insights  
+✔ Evaluate business impact of churn  
+✔ Build a predictive model  
 
 ---
 
@@ -50,42 +50,54 @@ The goal is to identify key factors driving customer attrition and provide **dat
 ## 📊 Key Business Insights (SQL Analysis)
 
 ### 🔹 Overall Churn
-Around **26.6% of customers** have churned, indicating a significant customer attrition problem.
+Around **26.6% of customers** have churned, indicating a significant attrition problem.
 
 ---
 
 ### 🔹 Contract Analysis
-Customers with **month-to-month contracts** have the highest churn (~42.7%), while long-term contracts show much lower churn.
+Customers with **month-to-month contracts** have the highest churn (~42.7%).
 
-👉 **Recommendation:** Promote long-term plans with discounts and incentives.
+👉 **Recommendation:** Promote long-term plans with incentives.
 
 ---
 
 ### 🔹 Payment Method
-Customers using **electronic check** have the highest churn (~45%), whereas automatic payment methods show lower churn.
+Customers using **electronic check** show the highest churn (~45%).
 
-👉 **Recommendation:** Encourage customers to switch to auto-payment options.
+👉 **Recommendation:** Encourage auto-payment methods.
 
 ---
 
 ### 🔹 Monthly Charges
 Customers with **higher monthly charges** are more likely to churn.
 
-👉 **Recommendation:** Introduce flexible pricing or bundled service offers.
+👉 **Recommendation:** Introduce flexible pricing or bundles.
 
 ---
 
 ### 🔹 Tenure Analysis
-Customers with **low tenure (0–1 year)** have the highest churn (~48.5%), while long-term customers are more loyal.
+Customers with **low tenure (0–1 year)** have the highest churn (~48.5%).
 
-👉 **Recommendation:** Improve onboarding and engagement strategies during early stages.
+👉 **Recommendation:** Improve onboarding and early engagement.
 
 ---
 
-### 🔹 High-Risk Customers
-Customers with **low tenure + high monthly charges** represent the highest churn risk segment.
+### 🔹 Customer Support (WHY Churn 🔥)
+Customers without **tech support** show significantly higher churn.
 
-👉 **Recommendation:** Target these customers with personalized retention strategies.
+👉 **Recommendation:** Improve customer support services and issue resolution.
+
+---
+
+### 🔹 High-Risk Segment
+Customers with **low tenure + high charges + flexible contracts** are most likely to churn.
+
+---
+
+### 🔹 Revenue Impact (MOST IMPORTANT 🔥)
+Approximately **30% of total revenue is lost due to churn**, highlighting a major financial impact.
+
+👉 **Recommendation:** Focus on retaining high-value customers to reduce revenue loss.
 
 ---
 
@@ -109,7 +121,7 @@ Customers with **low tenure + high monthly charges** represent the highest churn
 
 ![Monthly Charges vs Churn](violin_plot.png)
 
-📌 Customers with higher charges tend to churn more.
+📌 Higher charges correlate with higher churn.
 
 ---
 
@@ -117,7 +129,7 @@ Customers with **low tenure + high monthly charges** represent the highest churn
 
 ![Correlation Heatmap](heatmap.png)
 
-📌 Tenure shows negative correlation with churn → long-term customers are more loyal.
+📌 Tenure negatively correlates with churn.
 
 ---
 
@@ -125,13 +137,12 @@ Customers with **low tenure + high monthly charges** represent the highest churn
 
 ![Confusion Matrix](confusion_matrix.png)
 
-📌 Model performs well for non-churn prediction but can improve recall for churn cases.
+📌 Model performs well for non-churn prediction with scope to improve recall.
 
 ---
 
 ## 📈 Model Performance
 
-Evaluated using:
 ✔ Precision  
 ✔ Recall  
 ✔ F1-score  
@@ -141,31 +152,31 @@ Evaluated using:
 ## 📁 Dataset  
 
 📌 **Telco Customer Churn Dataset**  
-
 🔗 https://www.kaggle.com/datasets/blastchar/telco-customer-churn  
 
 ---
 
 ## 💡 Key Takeaways
 
-✨ High churn is driven by short-term contracts and high pricing  
-✨ New customers are more likely to churn  
-✨ Payment method plays a significant role in retention  
-✨ SQL + EDA helps uncover actionable business insights  
+✨ Churn is highest among short-term and new customers  
+✨ Pricing and payment behavior strongly influence churn  
+✨ Lack of support services increases churn risk  
+✨ Nearly **30% revenue is lost**, making retention critical  
 
 ---
 
 ## 🚀 Future Improvements
 
 🔹 Hyperparameter tuning  
-🔹 Use advanced models (XGBoost, CatBoost)  
-🔹 Deploy using Streamlit or Flask  
+🔹 Advanced models (XGBoost, CatBoost)  
+🔹 Deployment using Streamlit or Flask  
 
 ---
 
 ## 🙌 Conclusion
 
-This project demonstrates how combining **SQL analysis and Python EDA** helps identify churn drivers and provide actionable strategies to reduce customer attrition and improve business outcomes.
+This project highlights how combining **SQL analysis and Python EDA** can uncover key churn drivers, explain customer behavior, and quantify business impact.  
+The findings provide actionable strategies to reduce churn and improve revenue retention.
 
 ---
 
