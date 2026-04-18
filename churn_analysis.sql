@@ -76,3 +76,22 @@ AND MonthlyCharges > 70
 AND Churn='Yes';
 
 -- New customers with high charges are the most likely to churn.
+
+SELECT TechSupport,
+COUNT(*),
+SUM(CASE WHEN Churn='Yes' THEN 1 ELSE 0 END) as churn_rate
+FROM churn
+GROUP BY TechSupport;
+-- Customers without tech support churn the most.
+SELECT 
+ROUND(SUM(MonthlyCharges),2) AS total_revenue,
+ROUND(SUM(CASE WHEN Churn='Yes' THEN MonthlyCharges ELSE 0 END),2) AS revenue_lost
+FROM churn;
+
+-- Customer churn is primarily driven by short-term contracts, high monthly charges,
+-- and low tenure. Additionally, lack of tech support significantly increases churn risk. 
+-- The analysis also reveals that nearly 30% of total revenue is lost due to churn, making
+-- customer retention a critical business priority. Promoting long-term contracts, 
+-- improving support services, and targeting high-risk customers can help 
+-- reduce churn and increase revenue.
+
